@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Planet data table</title>
+        <link href="minimal-table.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Planet data table</h1>
+    
+        <div class="table-container">
+            <table>
+                <caption>
+                    Data about the planets of our solar system (Planetary facts taken from 
+                    <a 
+                        href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">
+                        Nasa's Planetary Fact Sheet - Metric
+                    </a>).
+                </caption>
+                <colgroup>
+                    <col> <!-- 1st empty column -->
+                    <col> <!-- 2nd empty column -->
+                    <col class="column-border"> <!-- 3rd column: planet names -->
+                    <col> <!-- Mass -->
+                    <col> <!-- Diameter -->
+                    <col> <!-- Density -->
+                    <col> <!-- Gravity -->
+                    <col> <!-- Day length -->
+                    <col> <!-- Distance -->
+                    <col> <!-- Temperature -->
+                    <col> <!-- Moons -->
+                    <col> <!-- Notes -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th id="name">Name</th>
+                        <th id="mass">Mass (10<sup>24</sup>kg)</th>
+                        <th id="diameter">Diameter (km)</th>
+                        <th id="density">Density (kg/m<sup>3</sup>)</th>
+                        <th id="gravity">Gravity (m/s<sup>2</sup>)</th>
+                        <th id="DayLen">Length of day (hours)</th>
+                        <th id="distancSUN">Distance from Sun (10<sup>6</sup>km)</th>
+                        <th id="temp">Mean temperature (°C)</th>
+                        <th id="numMOONS">Number of moons</th>
+                        <th id="notes">Notes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th id ="TerrPlanet" colspan="2" rowspan="4">Terrestrial planets</th>
+                        <td headers="name TerrPlanet">Mercury</td>
+                        <td headers="mass TerrPlanet">0.330</td>
+                        <td headers="diameter TerrPlanet">4,879</td>
+                        <td headers="density TerrPlanet">5427</td>
+                        <td headers="gravity TerrPlanet">3.7</td>
+                        <td headers="DayLen TerrPlanet">4222.6</td>
+                        <td headers="distancSUN TerrPlanet">57.9</td>
+                        <td headers="temp TerrPlanet">167</td>
+                        <td headers="numMOONS TerrPlanet">0</td>
+                        <td headers="notes TerrPlanet">Closest to the Sun</td>
+                    </tr>
+                    <tr>
+                        <td headers="TerrPlanet name">Venus</td>
+                        <td headers="mass TerrPlanet">4.87</td>
+                        <td headers="diameter TerrPlanet">12.104</td>
+                        <td headers="density TerrPlanet">5243</td>
+                        <td headers="gravity TerrPlanet">8.9</td>
+                        <td headers="DayLen TerrPlanet">2802.0</td>
+                        <td headers="distancSUN TerrPlanet">108.2</td>
+                        <td headers="temp TerrPlanet">464</td>
+                        <td headers="numMOONS TerrPlanet">0</td>
+                        <td headers="notes TerrPlanet">-----</td>
+                    </tr>
+                    <tr>
+                        <td headers="TerrPlanet name">Earth</td>
+                        <td headers="mass TerrPlanet">5.97</td>
+                        <td headers="diameter TerrPlanet">12.756</td>
+                        <td headers="density TerrPlanet">5514</td>
+                        <td headers="gravity TerrPlanet">9.8</td>
+                        <td headers="DayLen TerrPlanet">24.0</td>
+                        <td headers="distancSUN TerrPlanet">149.6</td>
+                        <td headers="temp TerrPlanet">15</td>
+                        <td headers="numMOONS TerrPlanet">1</td>
+                        <td headers="notes TerrPlanet">Our World</td>
+                    </tr>
+                    <tr>
+                        <td headers="TerrPlanet name">Mars</td>
+                        <td headers="mass TerrPlanet">0.642</td>
+                        <td headers="diameter TerrPlanet">6,792</td>
+                        <td headers="density TerrPlanet">3933</td>
+                        <td headers="gravity TerrPlanet">3.7</td>
+                        <td headers="DayLen TerrPlanet">24.7</td>
+                        <td headers="distancSUN TerrPlanet">227.9</td>
+                        <td headers="temp TerrPlanet">-65</td>
+                        <td headers="numMOONS TerrPlanet">2</td>
+                        <td headers="notes TerrPlanet">The red planet</td>
+                    </tr>
+                    <tr>
+                        <th id ="JovPlanet" rowspan="4">Jovian Planets</th>
+                        <th id ="GasGiant" rowspan="2" headers="JovPlanet">Gas Giants</th>
+                        <td headers="name GasGiant JovPlanet">Jupiter</td>
+                        <td headers="mass GasGiant JovPlanet">1898</td>
+                        <td headers="diameter GasGiant JovPlanet">142,984</td>
+                        <td headers="density GasGiant JovPlanet">1326</td>
+                        <td headers="gravity GasGiant JovPlanet">23.1</td>
+                        <td headers="DayLen GasGiant JovPlanet">9.9</td>
+                        <td headers="distancSUN GasGiant JovPlanet">778.6</td>
+                        <td headers="temp GasGiant JovPlanet">-110</td>
+                        <td headers="numMOONS GasGiant JovPlanet">67</td>
+                        <td headers="notes GasGiant JovPlanet">The largest planet</td>
+                    </tr>
+                    <tr>
+                        <td headers="name GasGiant JovPlanet">Saturn</td>
+                        <td headers="mass GasGiant JovPlanet">568</td>
+                        <td headers="diameter GasGiant JovPlanet">120,536</td>
+                        <td headers="density GasGiant JovPlanet">687</td>
+                        <td headers="gravity GasGiant JovPlanet">9.0</td>
+                        <td headers="DayLen GasGiant JovPlanet">10.7</td>
+                        <td headers="distancSUN GasGiant JovPlanet">1433.5</td>
+                        <td headers="temp GasGiant JovPlanet">-140</td>
+                        <td headers="numMOONS GasGiant JovPlanet">62</td>
+                        <td headers="notes GasGiant JovPlanet">----</td>
+                    </tr>
+                    <tr>
+                        <th id ="IceGiant" rowspan="2">Ice Giants</th>
+                        <td headers="name IceGiant JovPlanet">Uranus</td>
+                        <td headers="mass IceGiant JovPlanet">86.8</td>
+                        <td headers="diameter IceGiant JovPlanet">51.118</td>
+                        <td headers="density IceGiant JovPlanet">1271</td>
+                        <td headers="gravity IceGiant JovPlanet">8.7</td>
+                        <td headers="DayLen IceGiant JovPlanet">17.2</td>
+                        <td headers="distancSUN IceGiant JovPlanet">2872.5</td>
+                        <td headers="temp IceGiant JovPlanet">-195</td>
+                        <td headers="numMOONS IceGiant JovPlanet">27</td>
+                        <td headers="notes IceGiant JovPlanet">-----</td>
+                    </tr>
+                    <tr>
+                        <td headers="name IceGiant JovPlanet">Neptune</td>
+                        <td headers="mass IceGiant JovPlanet">102</td>
+                        <td headers="diameter IceGiant JovPlanet">49.528</td>
+                        <td headers="density IceGiant JovPlanet">1638</td>
+                        <td headers="gravity IceGiant JovPlanet">11.0</td>
+                        <td headers="DayLen IceGiant JovPlanet">16.1</td>
+                        <td headers="distancSUN IceGiant JovPlanet">4495.1</td>
+                        <td headers="temp IceGiant JovPlanet">-200</td>
+                        <td headers="numMOONS IceGiant JovPlanet">14</td>
+                        <td headers="notes IceGiant JovPlanet">-----</td>
+                    </tr>
+                    <tr>
+                        <th id="DwarfPlanet" colspan="2">Dwarf planets*</th>
+                        <td headers="name DwarfPlanet">Pluto</td>
+                        <td headers="mass DwarfPlanet">0.0146</td>
+                        <td headers="diameter DwarfPlanet">2.370</td>
+                        <td headers="density DwarfPlanet">2095</td>
+                        <td headers="gravity DwarfPlanet">0.7</td>
+                        <td headers="DayLen DwarfPlanet">153.3</td>
+                        <td headers="distancSUN DwarfPlanet">5906.4</td>
+                        <td headers="temp DwarfPlanet">-225</td>
+                        <td headers="numMOONS DwarfPlanet">5</td>
+                        <td headers="notes DwarfPlanet">Declassified as a planet in 2006, but this 
+                            <a 
+                                href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">
+                                remains controversial
+                            </a>.
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+
+</html>
