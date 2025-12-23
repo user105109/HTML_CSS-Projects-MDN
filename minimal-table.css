@@ -1,0 +1,163 @@
+/* ---------- GLOBAL SPACE THEME ---------- */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(circle at top left, #0a0f1a, #020617 80%);
+    margin: 0;
+    padding: 40px;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ---------- STARS ANIMATION ---------- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    box-shadow: 
+        50px 100px #fff,
+        200px 300px #fff,
+        400px 150px #fff,
+        600px 450px #fff,
+        800px 200px #fff,
+        1000px 500px #fff,
+        1200px 350px #fff,
+        1400px 100px #fff,
+        1600px 400px #fff;
+    animation: starMove 60s linear infinite;
+}
+
+@keyframes starMove {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-500px) translateX(-300px); }
+}
+
+/* ---------- MAIN HEADING ---------- */
+h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #f8fafc;
+    text-shadow: 0 0 15px #38bdf8, 0 0 25px #7dd3fc;
+}
+
+/* ---------- RESPONSIVE TABLE WRAPPER ---------- */
+.table-container {
+    overflow-x: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.4), 0 0 50px rgba(0,0,0,0.3);
+    border: 1px solid rgba(56,189,248,0.2);
+    animation: glowPulse 5s infinite ease-in-out alternate;
+}
+
+/* ---------- TABLE BASE ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 900px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    transform-style: preserve-3d;
+}
+
+/* ---------- HEADERS ---------- */
+thead th {
+    background: rgba(56, 189, 248, 0.25);
+    padding: 14px 20px;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.7);
+    text-shadow: 0 0 6px #38bdf8;
+    backdrop-filter: blur(6px);
+}
+
+/* ---------- CELLS ---------- */
+td, th {
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    padding: 12px 18px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+/* ---------- ROW HOVER EFFECT ---------- */
+tbody td:hover {
+    background: rgba(56, 189, 248, 0.25);
+    transform: scale(1.06) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 0 15px #38bdf8, 0 0 25px #7dd3fc inset;
+    z-index: 20;
+}
+
+/* ---------- ROW COLORING ---------- */
+tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+tbody tr:nth-child(odd) td {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- SIDE HEADER CELLS ---------- */
+tbody th {
+    background: rgba(56, 189, 248, 0.2);
+    color: #f8fafc;
+    font-weight: 600;
+    text-shadow: 0 0 8px #38bdf8;
+}
+
+/* ---------- PLANET NAMES COLUMN ---------- */
+.column-border {
+    border-left: 3px solid #38bdf8 !important;
+    border-right: 3px solid #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.15);
+}
+
+/* ---------- CAPTION ---------- */
+caption {
+    caption-side: top;
+    padding: 10px;
+    font-size: 1rem;
+    color: #cbd5e1;
+    text-shadow: 0 0 8px #38bdf8;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #38bdf8;
+    transition: 0.3s;
+}
+a:hover {
+    color: #7dd3fc;
+    text-shadow: 0 0 6px #38bdf8;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.15); }
+    100% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.35); }
+}
+
+/* ---------- MOBILE TWEAKS ---------- */
+@media (max-width: 600px) {
+    table {
+        font-size: 0.78rem;
+    }
+
+    td, th {
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
